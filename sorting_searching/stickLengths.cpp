@@ -3,6 +3,7 @@ using namespace std;
 typedef long long ll;
 
 // https://cses.fi/problemset/task/1074
+// Absolute Distance is always minimized around the `median`.
 
 int main() {
     int n;
@@ -22,8 +23,9 @@ int main() {
     if(n&1) {
         total = arr[n/2];
     } else {
-        total = (arr[n/2]+arr[n/2+1]) / 2;
+        total = (arr[n/2]+arr[n/2-1]) / 2;
     }
+
     ll cost = 0;
     for(int i=0; i<n; i++) {
         cost += abs(total-arr[i]);
