@@ -2,6 +2,9 @@
 using namespace std;
 typedef long long ll;
 
+// Just trying to convert each of array element to negative by flipping to minimize the sum
+// We have enough number of operations to flip all elements.
+
 int arr[200005];
 void solve() {
     int n;  cin >> n;
