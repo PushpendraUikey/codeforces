@@ -56,6 +56,13 @@ int main() {
         adj[a].push_back({b,x});
     }
     dist[1] = 0;
+    priority_queue<pair<ll,int>> q;
+    q.push({0, 1});
+
+    while(!q.empty()) {
+        auto [wt, u] = q.top(); q.pop();
+        
+    }
     if(dfs(1)) {
         cout << dist[n] << '\n';
     } else{
